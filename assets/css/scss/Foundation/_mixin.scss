@@ -1,0 +1,21 @@
+@mixin vwFont($fz) {
+    font-size: calc($fz / 1440 * 100vw);
+    @media screen and (min-width: 1441px) {
+        font-size: #{$fz}px;
+    }
+}
+
+@mixin vwFontSp($fz) {
+    font-size: calc($fz / 375 * 100vw);
+}
+
+@mixin vwSize($parameta, $size) {
+    #{$parameta}: calc($size / 1440 * 100vw);
+    @media screen and (min-width: 1441px) {
+        #{$parameta}: #{$size}px;
+    }
+}
+
+@mixin vwSizeSp($parameta, $size) {
+    #{$parameta}: calc($size / 375 * 100vw);
+}
